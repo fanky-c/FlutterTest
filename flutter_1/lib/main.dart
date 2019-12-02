@@ -8,6 +8,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'wellcome flutter test',
+      theme: new ThemeData(
+        primaryColor: Colors.red,   //定义app主题样式
+      ),
       home: new RandomWords()
     );
   }
