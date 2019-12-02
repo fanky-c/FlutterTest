@@ -49,7 +49,7 @@ class RandomWordsState extends State<RandomWords> {
 
             return new Scaffold(
               appBar: new AppBar(
-                title: new Text('子页面'),
+                title: new Text('我的收藏'),
               ),
               body: new ListView(
                 children: divided,
