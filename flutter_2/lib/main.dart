@@ -32,7 +32,10 @@ class MyScaffold extends StatelessWidget{
            ),
            new Expanded(
               child: new Center(
-                child: new Text('hello world!'),
+                child: new Text(
+                  'hello world!',
+                  style: TextStyle(color: Colors.black, fontSize: 50.0)
+                ),
               ),
            ),
          ],
@@ -49,7 +52,7 @@ class MyAppBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
      return new Container(
-       height: 56.0,
+       height: 90.0,
        padding: const EdgeInsets.symmetric(horizontal:8.0),
        decoration: new BoxDecoration(color: Colors.red[600]),
        child: new Row(
