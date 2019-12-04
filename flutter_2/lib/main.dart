@@ -15,11 +15,42 @@ void main() => runApp(
   new MaterialApp(
     title: 'my app',
     //home: new MyScaffold(),
-    home: new TunoroalHome(),
+    //home: new TunoroalHome(),
+    home: new Counter(),
   ),
 );
 
+//有状态widget
+class Counter extends StatefulWidget{
+   @override
+   State createState() {
+    return new _CounterState();
+  }
+}
+class _CounterState extends State{
+  int _count = 0;
 
+  void _increment(){
+    setState(() {
+      _count++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+     return new Row(
+       children: <Widget>[
+         new RaisedButton(
+           onPressed: _increment,
+           child: new Text('增加'),
+         ),
+         new Text('Count is: $_count')
+       ],
+     );    
+  }
+}
+
+//Scaffold布局
 class TunoroalHome extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
