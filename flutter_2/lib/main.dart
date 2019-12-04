@@ -14,9 +14,52 @@ import 'package:flutter/material.dart';
 void main() => runApp(
   new MaterialApp(
     title: 'my app',
-    home: new MyScaffold(),
+    //home: new MyScaffold(),
+    home: new TunoroalHome(),
   ),
 );
+
+
+class TunoroalHome extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        leading: new IconButton(
+          icon: new Icon(Icons.menu),
+          tooltip: '导航菜单',
+          onPressed: (){
+            print('点击导航菜单');
+          },
+        ),
+        title: new Text('测试'),
+        actions: <Widget>[
+          new IconButton(
+            icon: new Icon(Icons.search),
+            tooltip: '搜索',
+            onPressed: (){
+              print('点击搜索按钮');
+            },
+          )
+        ],
+      ),
+      body: new Center(
+        child: new Text(
+          'hello world',
+          style: TextStyle(fontSize: 20.0),
+        ),
+      ),
+      backgroundColor: Colors.green, 
+      floatingActionButton: new FloatingActionButton(
+        tooltip: '增加',
+        child: new Icon(Icons.add),
+        onPressed: (){
+          print('点击增加按钮');
+        },
+      ),
+    );
+  }
+}
 
 class MyScaffold extends StatelessWidget{
   @override
