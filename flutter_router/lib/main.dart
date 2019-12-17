@@ -52,7 +52,13 @@ class SecondPage extends StatelessWidget{
 
 //跳转到具体页面
 void _navigateSecondPage(BuildContext context){
+  //  Navigator.push(context, MaterialPageRoute(builder: (context) {
+  //     return SecondPage();
+  //  }));
+
    Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage()));
+   
+     
 }
 
 void _backCurrentPage(BuildContext context){
