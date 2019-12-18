@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_router/alert.dart';
 
 void main() => runApp(MaterialApp(
   title: 'Navigation & router',
@@ -19,6 +20,7 @@ class FirstPage  extends StatelessWidget {
         child: RaisedButton(
           child: new Text('点击跳转'),
           onPressed: (){
+            show(context, '我擦');
             _navigateSecondPage(context);
             print('点击了');
           },
@@ -55,12 +57,10 @@ void _navigateSecondPage(BuildContext context){
   //  Navigator.push(context, MaterialPageRoute(builder: (context) {
   //     return SecondPage();
   //  }));
-
    Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage()));
-   
      
 }
 
 void _backCurrentPage(BuildContext context){
-   Navigator.pop(context);
+   Navigator.of(context).pop('我是第二个页面返回数据');
 }
