@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "FlutterTest",
-            "program": "./flutter_router/lib/main.dart",
+            "program": "./flutter_dart/lib/main.dart",
             "request": "launch",
             "type": "dart"
         }

@@ -1,4 +1,4 @@
-package com.example.futter_dart;
+package com.example.flutter_dart;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
