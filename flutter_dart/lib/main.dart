@@ -53,8 +53,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    print(printUserInfo('chao'));
-    print(printUserInfoByObject('超超', age: 10, sex: '男'));
+    //print(printUserInfo('chao'));
+    //print(printUserInfoByObject('超超', age: 10, sex: '男'));
+
+    Person a = new Person('chao', 20);
+    print(a.myName);
+    a.myAge = 300;
+    print(a.say());
+    print(a.age);
     
     return Scaffold(
       appBar: AppBar(
