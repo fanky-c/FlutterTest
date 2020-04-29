@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './class.dart';
+import './student.dart';
 import './function.dart';
+import './generic.dart';
 
 void main() => runApp(MyApp());
 
@@ -56,11 +58,34 @@ class _MyHomePageState extends State<MyHomePage> {
     //print(printUserInfo('chao'));
     //print(printUserInfoByObject('超超', age: 10, sex: '男'));
 
-    Person a = new Person('chao', 20);
-    print(a.myName);
-    a.myAge = 300;
-    print(a.say());
-    print(a.age);
+    // Person a = new Person('chao', 20);
+    // print(a.myName);
+    // a.myAge = 300;
+    // print(a.say());
+    // print(a.age);
+
+    Stundent s = new Stundent('chao', 10, '写代码', '男');
+    s.run();
+    Stundent.cry();
+
+    //print(getRawData<num>(111));
+    // GetClass g = new GetClass();
+    // g.add(1);
+    // g.add('zhao');
+    // g.printClass();
+    GetClass g = new GetClass<String>();
+    g.add('1');
+    g.add('zhao');
+    g.printClass();   
+
+    GetClass g1 = new GetClass<int>();
+    g1.add(1);
+    g1.add(2111);
+    g1.printClass();
+
+    MemoryCache m = new MemoryCache();
+    m.setByKey('aaa', 'nnn');
+    m.getByKey('aa');        
     
     return Scaffold(
       appBar: AppBar(
